@@ -1,6 +1,11 @@
 package com.example.countdowntimer;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -8,8 +13,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private final long startTime = 51000;
+    private final long startTime = 61000;
     private final long interval = 1000;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,5 +46,6 @@ public class MainActivity extends AppCompatActivity {
                 countDownTimer.start();
             }
         });
+        
     }
 }
